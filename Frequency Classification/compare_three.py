@@ -24,7 +24,7 @@ gru = theano.function(**cPickle.load(open('theano_model/gru.pkl', "rb")))
 dy_dh = theano.function(**cPickle.load(open('theano_model/dy_dh.pkl', "rb"))) 
 classification = theano.function(**cPickle.load(open('theano_model/y.pkl', "rb"))) 
 
-with open('C:/Users/shank/Documents/Acads/RNNs/Code/RNN_copy_task/GRU_trained.txt', "rb") as fp:
+with open('./GRU_trained.txt', "rb") as fp:
     list_of_params = pickle.load(fp)
 h_initial = list_of_params[0]
 
